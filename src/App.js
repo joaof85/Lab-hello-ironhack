@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Declarative from "./Declarative";
+import Components from "./Components";
+import SingleWay from "./SingleWay";
+import Jsx from "./Jsx";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="navbar">
+          <img src="/images/ironhack-logo.svg" alt="a logo" />
+          <img src="/images/menu-top.svg" alt="another logo" />
+        </div>
+        <div className="header">
+          <h1 className="title">Say Hello to ReactJS</h1>
+          <a className="par">
+            <p>You will learn how to use </p>
+            <p>the most popular frontend library,</p>
+            <p>and become a Super Ninja developer</p>
+          </a>
+
+          <button className="button" type="button" class="btn btn-light">
+            Awesome!
+          </button>
+        </div>
       </header>
-    </div>
+      <div className="section flex-row">
+        <div className="colum"> <Declarative /></div>
+        <div className="colum"> <Components /> </div>
+        <div className="colum"> <Jsx /></div>
+        <div className="colum"> <SingleWay/></div>
+      </div>
+    </>
   );
 }
 
